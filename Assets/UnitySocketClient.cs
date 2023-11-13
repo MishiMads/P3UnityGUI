@@ -10,10 +10,6 @@ public class UnitySocketClient : MonoBehaviour
     private NetworkStream stream;
     private byte[] dataBuffer = new byte[1024];
     
-    [SerializeField] private Button Øvelse1;
-    [SerializeField] private Button Øvelse2;
-    [SerializeField] private Button Øvelse3;
-    
     
     void Start()
     {
