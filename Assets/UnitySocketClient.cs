@@ -2,46 +2,86 @@ using System;
 using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UnitySocketClient : MonoBehaviour
 {
     private TcpClient client;
     private NetworkStream stream;
-    private byte[] dataBuffer = new byte[1024];
-    
-    
-    void Start()
+    private byte[] receiveBuffer = new byte[1024];
+
+    private void Start()
     {
-        client = new TcpClient("localhost", 12345);
-        stream = client.GetStream();
+        ConnectToServer();
+        StartListening();
     }
 
-    void Update()
+    private void ConnectToServer()
     {
-    
-        
-        if (Input.GetKeyDown(KeyCode.Space))
+        try
         {
-            string message = "Hello from Unity";
-            byte[] data = Encoding.ASCII.GetBytes(message);
-            stream.Write(data, 0, data.Length);
-
-            int bytesRead = stream.Read(dataBuffer, 0, dataBuffer.Length);
-            string response = Encoding.ASCII.GetString(dataBuffer, 0, bytesRead);
-            Debug.Log("Received: " + response);
+            client = new TcpClient("127.0.0.1", 5555);
+            stream = client.GetStream();
+            Debug.Log("Connected to server");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error: {e.Message}");
         }
     }
 
-    void click()
+    private void StartListening()
     {
-        Debug.Log("Øvelse 1");
+        try
+        {
+            stream.BeginRead(receiveBuffer, 0, receiveBuffer.Length, OnReceiveData, null);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error: {e.Message}");
+        }
     }
-    void OnDestroy()
+
+    private void OnReceiveData(IAsyncResult ar)
     {
-        stream.Close();
-        client.Close();
+        try
+        {
+            int bytesRead = stream.EndRead(ar);
+            if (bytesRead > 0)
+            {
+                string receivedData = Encoding.UTF8.GetString(receiveBuffer, 0, bytesRead);
+                Debug.Log($"Received data from server: {receivedData}");
+
+                // Add your code to process the received data here
+            }
+
+            // Continue listening for more data
+            StartListening();
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error: {e.Message}");
+        }
     }
-    
-    
+
+    public void SendData(string data)
+    {
+        try
+        {
+            byte[] message = Encoding.UTF8.GetBytes(data);
+            stream.Write(message, 0, message.Length);
+            Debug.Log($"Sent data to server: {data}");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error: {e.Message}");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (client != null)
+        {
+            client.Close();
+        }
+    }
 }
