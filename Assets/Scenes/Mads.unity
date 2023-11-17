@@ -5467,7 +5467,7 @@ GameObject:
   - component: {fileID: 2058510178}
   - component: {fileID: 2058510177}
   - component: {fileID: 2058510176}
-  - component: {fileID: 2058510179}
+  - component: {fileID: 2058510180}
   m_Layer: 5
   m_Name: Knap 3
   m_TagString: Untagged
@@ -5539,9 +5539,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2058510179}
-        m_TargetAssemblyTypeName: RunPythonScript, Assembly-CSharp
-        m_MethodName: OnButtonClick
+      - m_Target: {fileID: 2058510180}
+        m_TargetAssemblyTypeName: UnitySocketClient, Assembly-CSharp
+        m_MethodName: OnRunRealsenseScriptButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5589,7 +5589,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058510172}
   m_CullTransparentMesh: 1
---- !u!114 &2058510179
+--- !u!114 &2058510180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5598,7 +5598,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2058510172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43ccdfe95d134174eb9d0778b7a35ae7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95dcb90125831ca4fbea248aadeb92ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2078449212

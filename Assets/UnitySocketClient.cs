@@ -62,11 +62,6 @@ public class UnitySocketClient : MonoBehaviour
             Debug.LogError($"Error: {e.Message}");
         }
     }
-    
-    public void OnRunRealsenseScriptButtonClick()
-    {
-        SendData("run_realsense_script");
-    }
 
     public void SendData(string data)
     {

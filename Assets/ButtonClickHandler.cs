@@ -15,4 +15,8 @@ public class ButtonClickHandler : MonoBehaviour
             // Replace "YourMessage" with the actual message you want to send to the Python server
             socketClient.SendData("Nej Mads");
         }
+    public void OnRunRealsenseScriptButtonClick()
+    {
+        socketClient.SendData("123");
+    }
 }
