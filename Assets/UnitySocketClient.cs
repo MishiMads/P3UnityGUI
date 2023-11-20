@@ -54,7 +54,7 @@ public class UnitySocketClient : MonoBehaviour
                 // Add your code to process the received data here
             }
 
-            // Continue listening for more data
+            // Start listening for more data after processing
             StartListening();
         }
         catch (Exception e)
