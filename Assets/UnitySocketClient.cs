@@ -1,19 +1,24 @@
 using System;
+using System.Collections;
 using System.Net.Sockets;
+using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using TMPro;
 
 public class UnitySocketClient : MonoBehaviour
 {
     private TcpClient client;
     private NetworkStream stream;
     private byte[] receiveBuffer = new byte[1024];
+    private List<string> antalReps = new List<string>() { "0", "1", "2", "3", "4", "5" };
+    public static string currentReps;
 
     private void Start()
     {
         ConnectToServer();
-        StartListening();
     }
+    
 
     private void ConnectToServer()
     {
@@ -21,6 +26,7 @@ public class UnitySocketClient : MonoBehaviour
         {
             client = new TcpClient("127.0.0.1", 5555);
             stream = client.GetStream();
+            StartListening();
             Debug.Log("Connected to server");
         }
         catch (Exception e)
@@ -51,11 +57,15 @@ public class UnitySocketClient : MonoBehaviour
                 string receivedData = Encoding.UTF8.GetString(receiveBuffer, 0, bytesRead);
                 Debug.Log($"Received data from server: {receivedData}");
 
-                // Add your code to process the received data here
-            }
+                if (antalReps.Contains(receivedData))
+                {
+                    currentReps = receivedData;
+                    print("Reps: " + currentReps);
+                }
 
-            // Start listening for more data after processing
-            StartListening();
+                // Continue listening for more data
+                StartListening();
+            }
         }
         catch (Exception e)
         {
