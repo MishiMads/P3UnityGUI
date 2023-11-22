@@ -13,6 +13,7 @@ public class UnitySocketClient : MonoBehaviour
     private byte[] receiveBuffer = new byte[1024];
     private List<string> antalReps = new List<string>() { "0", "1", "2", "3", "4", "5" };
     public static string currentReps;
+    public static string assessmentScore;
 
     private void Start()
     {
@@ -62,6 +63,12 @@ public class UnitySocketClient : MonoBehaviour
                     currentReps = receivedData;
                     print("Reps: " + currentReps);
                 }
+                else
+                {
+                    assessmentScore = receivedData; 
+                    print(assessmentScore);
+                }
+
 
                 // Continue listening for more data
                 StartListening();

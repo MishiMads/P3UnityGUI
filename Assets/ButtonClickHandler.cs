@@ -19,4 +19,9 @@ public class ButtonClickHandler : MonoBehaviour
     {
         socketClient.SendData("123");
     }
+    
+    public void Stop()
+    {
+        socketClient.SendData("Stop");
+    }
 }
