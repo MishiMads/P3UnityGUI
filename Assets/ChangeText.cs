@@ -7,8 +7,10 @@ public class ChangeText : UnitySocketClient
 {
     //public TMP_Text canvasText;
     public TMP_Text repText;
-    private string textVariable = UnitySocketClient.currentReps;
-    
+
+    public TMP_Text assText;
+    // private string textVariable = UnitySocketClient.currentReps;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,10 @@ public class ChangeText : UnitySocketClient
         if (UnitySocketClient.currentReps != null)
         {
             repText.text = "Reps: " + currentReps;
+        }
+        if (UnitySocketClient.assessmentScore != null)
+        {
+            assText.text = "Assessment Score: " + assessmentScore + "%";
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Net.Sockets;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 using UnityEngine;
 using TMPro;
@@ -14,9 +15,23 @@ public class UnitySocketClient : MonoBehaviour
     private List<string> antalReps = new List<string>() { "0", "1", "2", "3", "4", "5" };
     public static string currentReps;
     public static string assessmentScore;
+    private List<string> assessmentList = new List<string>();
+
+
+    private void makeLists()
+    {
+        for (int i = 20; i < 100; i++)
+        {
+            assessmentList.Add(i.ToString());
+        }
+    }
+    
+
+
 
     private void Start()
     {
+        makeLists();
         ConnectToServer();
     }
     
@@ -63,7 +78,7 @@ public class UnitySocketClient : MonoBehaviour
                     currentReps = receivedData;
                     print("Reps: " + currentReps);
                 }
-                else
+                if (assessmentList.Contains(receivedData))
                 {
                     assessmentScore = receivedData; 
                     print(assessmentScore);
