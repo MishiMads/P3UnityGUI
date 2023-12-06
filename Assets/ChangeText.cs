@@ -9,6 +9,9 @@ public class ChangeText : UnitySocketClient
     public TMP_Text repText;
 
     public TMP_Text assText;
+
+    private int assessmentScoreInt;
+    
     
     // private string textVariable = UnitySocketClient.currentReps;
 
@@ -26,7 +29,26 @@ public class ChangeText : UnitySocketClient
         }
         if (UnitySocketClient.assessmentScore != null)
         {
-            assText.text = "Assessment Score: " + assessmentScore + "%";
+            
+            assessmentScoreInt = int.Parse(assessmentScore);
+            
+            if (assessmentScoreInt < 25)
+            {
+                assText.text = "Assessment: Try again";
+            }
+            
+            if (assessmentScoreInt >= 25 && assessmentScoreInt < 75)
+            {
+                assText.text = "Assessment: Good";
+            }
+            
+            if (assessmentScoreInt >= 75)
+            {
+                assText.text = "Assessment: Very good";
+            }
+            
+            //If we need to display the exact score: assText.text = "Assessment Score: " + assessmentScore + "%";
+                
         }
     }
 }

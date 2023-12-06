@@ -1010,7 +1010,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268528569}
-  - component: {fileID: 268528570}
   m_Layer: 5
   m_Name: ButtonContainer
   m_TagString: Untagged
@@ -1042,18 +1041,6 @@ RectTransform:
   m_AnchoredPosition: {x: -296, y: 106}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &268528570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268528568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab439e515abc29e468015a481605c707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &274605836
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,7 +3309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &746102033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4763,12 +4750,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 975273399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b201d28a5c97eb4e85b157f098f9004, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f8fcfccb1be3364c9a905a9f5bbf506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   repTextBicep: {fileID: 798180647}
   repTextRejse: {fileID: 1977058724}
-  repTextReach: {fileID: 1635755592}
+  repTextReach: {fileID: 1550336208}
   assTextBicep: {fileID: 2032026912}
   assTextRejse: {fileID: 1726695574}
   assTextReach: {fileID: 1550336208}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Assessment
+  m_text: 'Assessment:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -396,10 +396,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 59.05
-  m_fontSizeBase: 50
+  m_fontSize: 57
+  m_fontSizeBase: 57
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -462,8 +462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 749.66284, y: 417}
-  m_SizeDelta: {x: 323.6754, y: -35.7522}
+  m_AnchoredPosition: {x: 599.78, y: 469.52}
+  m_SizeDelta: {x: 352.675, y: -28.905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &84147361
 GameObject:
@@ -7397,7 +7397,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1481249225}
-  - component: {fileID: 1481249226}
   m_Layer: 5
   m_Name: ButtonContainer
   m_TagString: Untagged
@@ -7429,18 +7428,6 @@ RectTransform:
   m_AnchoredPosition: {x: -296, y: 106}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1481249226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481249224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab439e515abc29e468015a481605c707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1490054444
 GameObject:
   m_ObjectHideFlags: 0
@@ -8405,8 +8392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 741.68896, y: 492.24945}
-  m_SizeDelta: {x: 148.4907, y: -35.752197}
+  m_AnchoredPosition: {x: 543.98, y: 291}
+  m_SizeDelta: {x: 241.08, y: -14.785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763618090
 MonoBehaviour:
@@ -8455,8 +8442,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 57
+  m_fontSizeBase: 57
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8491,7 +8478,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -40.04193}
+  m_margin: {x: 8.295677, y: 0.005584717, z: 0, w: -40.04193}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9992,7 +9979,6 @@ GameObject:
   - component: {fileID: 2094331109}
   - component: {fileID: 2094331108}
   - component: {fileID: 2094331107}
-  - component: {fileID: 2094331106}
   m_Layer: 5
   m_Name: "\xD8velse1"
   m_TagString: Untagged
@@ -10020,18 +10006,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2094331106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094331104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab439e515abc29e468015a481605c707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2094331107
 MonoBehaviour:
   m_ObjectHideFlags: 0
