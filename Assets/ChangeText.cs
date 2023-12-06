@@ -6,9 +6,14 @@ using TMPro;
 public class ChangeText : UnitySocketClient
 {
     //public TMP_Text canvasText;
-    public TMP_Text repText;
+    public TMP_Text repTextBicep;
+    public TMP_Text repTextRejse;
+    public TMP_Text repTextReach;
 
-    public TMP_Text assText;
+    public TMP_Text assTextBicep;
+    public TMP_Text assTextRejse;
+    public TMP_Text assTextReach;
+    
     // private string textVariable = UnitySocketClient.currentReps;
 
     // Start is called before the first frame update
@@ -21,11 +26,15 @@ public class ChangeText : UnitySocketClient
     {
         if (UnitySocketClient.currentReps != null)
         {
-            repText.text = "Reps: " + currentReps;
+            repTextBicep.text = "Reps: " + currentReps;
+            repTextRejse.text = "Reps: " + currentReps;
+            repTextReach.text = "Reps: " + currentReps;
         }
         if (UnitySocketClient.assessmentScore != null)
         {
-            assText.text = "Assessment Score: " + assessmentScore + "%";
+            assTextBicep.text = "Assessment Score: " + assessmentScore + "%";
+            assTextRejse.text = "Assessment Score: " + assessmentScore + "%";
+            assTextReach.text = "Assessment Score: " + assessmentScore + "%";
         }
     }
 }
