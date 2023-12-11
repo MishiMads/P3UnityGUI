@@ -11,6 +11,8 @@ public class ChangeText : UnitySocketClient
     public TMP_Text assText;
 
     private int assessmentScoreInt;
+
+    public int Reps;
     
     
     // private string textVariable = UnitySocketClient.currentReps;
@@ -23,10 +25,20 @@ public class ChangeText : UnitySocketClient
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reps += 1;
+        }
+
+        repText.text = "Reps: " + Reps;
+
+
         if (UnitySocketClient.currentReps != null)
         {
             repText.text = "Reps: " + currentReps;
         }
+
+
         if (UnitySocketClient.assessmentScore != null)
         {
             
