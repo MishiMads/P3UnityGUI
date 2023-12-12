@@ -25,28 +25,6 @@ public class ChangeText : UnitySocketClient
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            assText.text = "Assessment: Try again";
-            Reps += 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            assText.text = "Assessment: Good";
-            Reps += 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            assText.text = "Assessment: Very good";
-            Reps += 1;
-        }
-
-
-        repText.text = "Reps: " + Reps;
-
-
         if (UnitySocketClient.currentReps != null)
         {
             repText.text = "Reps: " + currentReps;
@@ -55,7 +33,7 @@ public class ChangeText : UnitySocketClient
 
         if (UnitySocketClient.assessmentScore != null)
         {
-            
+            Debug.LogWarning("assessmentScore " + assessmentScore);
             assessmentScoreInt = int.Parse(assessmentScore);
             
             if (assessmentScoreInt < 25)
